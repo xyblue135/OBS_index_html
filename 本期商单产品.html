@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商单横幅</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    background:transparent;
+    overflow:hidden;
+    font-family:"Microsoft Yahei",sans-serif;
+}
+.banner{
+    position:absolute;
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%) translateX(-300px);
+    opacity:0;
+    background:rgba(0,0,0,0.65);
+    border:2px solid #ffc107;
+    padding:16px 32px;
+    border-radius:12px;
+    color:#fff;
+    animation: slideIn 0.8s ease forwards, stay 4s 0.8s forwards, slideOut 0.8s 4.8s forwards;
+}
+.title{font-size:28px;font-weight:bold;color:#ffdd70;}
+.desc{font-size:18px;margin-top:6px;opacity:0.9}
+@keyframes slideIn{to{transform:translateX(-50%) translateX(0);opacity:1;}}
+@keyframes stay{to{opacity:1;}}
+@keyframes slideOut{to{transform:translateX(-50%) translateX(300px);opacity:0;}}
+</style>
+</head>
+<body>
+    <div class="banner">
+        <div class="title">🔥 本期商单产品</div>
+        <div class="desc">限时福利 | 点击下方链接了解详情</div>
+    </div>
+</body>
+</html>
